@@ -17,7 +17,7 @@
     </tr>
     <tr v-for="(item, index) in lista" :key="index">
       <td>
-        {{ item.Id }}
+        {{ item.Index }}
       </td>
       <td>
         {{ item.Nombre }}
@@ -45,7 +45,7 @@ export default {
       let result = await servicioPersona.eliminarPersona(id);
       console.log(result);
       this.actualizarTabla(true);
-    },
-  },
+    }
+  }
 };
 </script>

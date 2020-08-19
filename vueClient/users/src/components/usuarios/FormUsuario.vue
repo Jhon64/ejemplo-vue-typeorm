@@ -44,7 +44,7 @@ export default {
   data() {
     return {
       apellido: "",
-      nombre: "",
+      nombre: ""
     };
   },
   props: ["actualizarTabla"],
@@ -56,7 +56,7 @@ export default {
       let registroPersona = await personaServicio.registrarPersona(data);
       this.actualizarTabla(true);
       console.log(registroPersona);
-    },
-  },
+    }
+  }
 };
 </script>

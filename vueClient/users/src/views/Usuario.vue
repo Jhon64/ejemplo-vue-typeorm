@@ -23,11 +23,11 @@ import personaServicio from "../servicio/UsuarioService";
 export default {
   components: {
     FormUsuario,
-    TablaUsuario,
+    TablaUsuario
   },
   data() {
     return {
-      listaPersonas: [],
+      listaPersonas: []
     };
   },
   methods: {
@@ -41,13 +41,13 @@ export default {
     cargarLista() {
       let _vm = this;
       _vm.listaPersonas = [];
-      personaServicio.listarUsuarios().then((result) => {
+      personaServicio.listarUsuarios().then(result => {
         _vm.listaPersonas = result.data;
       });
-    },
+    }
   },
   mounted() {
     this.cargarLista();
-  },
+  }
 };
 </script>
