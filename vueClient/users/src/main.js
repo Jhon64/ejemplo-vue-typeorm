@@ -8,7 +8,9 @@ axios.defaults.baseURL = "http://localhost:4000";
 Vue.config.productionTip = false;
 
 import vuetify from "@/plugins/vuetify"; // path to vuetify export
+import Toasted from "vue-toasted";
 
+Vue.use(Toasted);
 new Vue({
   router,
   store,

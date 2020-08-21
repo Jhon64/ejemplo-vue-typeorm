@@ -5,6 +5,8 @@ import Rutas from './rutas/index';
 import { Connection, createConnection, getConnection } from "typeorm"
 import personaRouter from "./rutas/persona.router"
 import indexRouter from "./rutas/index"
+import usuarioRouter from "./rutas/usuario.router"
+import autenticarRouter from "./rutas/autenticar.router"
 import cors from "cors"
 
 export class Aplicacion {
@@ -32,6 +34,8 @@ export class Aplicacion {
 
         this.app.use(indexRouter)
         this.app.use("/persona", personaRouter)
+        this.app.use("/usuario", usuarioRouter)
+        this.app.use("/", autenticarRouter)
     }
     async database() {
         const connection: Connection = await createConnection();

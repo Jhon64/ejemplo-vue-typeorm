@@ -25,8 +25,9 @@ export class PersonaModel implements PersonaRepository {
 
     async listarPersonas(): Promise<Array<PersonaResponse>> {
         let lista: Array<Persona> = await getRepository(Persona).find({ order: { id: "ASC" } })
-        let result = lista.map((persona: Persona) => {
+        let result = lista.map((persona: Persona, index) => {
             let response = new PersonaResponse()
+            response.Index = index + 1
             response.Id = persona.id
             response.Nombre = persona.nombre
             response.Apellido = persona.apellido

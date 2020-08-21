@@ -1,7 +1,7 @@
 import { PersonaModel } from '../modelos/Persona.model';
 import { PersonaRequest } from '../dto/request/personaRequest';
 import { Persona } from '../entidades/Persona';
-import { request } from 'http';
+
 
 export class PersonaControl {
     private model: PersonaModel
